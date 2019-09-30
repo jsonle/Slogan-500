@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :slogans
   resources :companies
   resources :scores
   resources :users

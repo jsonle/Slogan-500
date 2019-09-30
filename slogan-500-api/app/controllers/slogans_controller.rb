@@ -1,0 +1,2 @@
+class SlogansController < ApplicationController
+end

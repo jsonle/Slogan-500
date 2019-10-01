@@ -20,19 +20,16 @@
       
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a id="username" class="nav-link" href="#"> Login <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
               <a id="leaderboards" class="nav-link" href="#">Leaderboards</a>
             </li>
           </ul>
-          <form hidden="true" class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="username">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">submit</button>
+          <form id="login-form" class="form-inline my-2 my-lg-0">
+            <input id="login-input" class="form-control mr-sm-2" type="text" placeholder="username" name="user[username]">
+            <button id="login-button" class="btn btn-secondary my-2 my-sm-0" type="submit">submit</button>
           </form>
         </div>
-       </nav>
+    </nav>
        <br>
         <div class="row">
             <div class="col-sm-8">
@@ -64,4 +61,5 @@
 
 </body>
 <script src="./src/index.js"></script>
+<script src="./src/login.js"></script>
 </html>

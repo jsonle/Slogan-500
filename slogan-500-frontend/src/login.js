@@ -32,12 +32,12 @@ function sessionFetch() {
 
 // Logout
 function logoutFetch(user) {
-    data = {
+   let data = {
         user_id: user['id'],
         username: user['username']
     }
 
-    configObj = {
+   let configObj = {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",

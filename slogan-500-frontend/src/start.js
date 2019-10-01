@@ -34,31 +34,52 @@ function startup() {
             .then(function(options){
                 //these are the four random companies and their slogans 
                 
-                            let sloganhead = document.createElement("h3")
-                            let slogan = document.createElement("h2")
-                            slogan.setAttribute("id", "slogan-head")
+                            let sloganhead = document.createElement("h1")
+                            let slogan = document.createElement("h3")
+                            slogan.setAttribute("id", "sloganonboard")
                             sloganhead.innerText = "Slogan:"
                             div.appendChild(sloganhead)
                             div.appendChild(slogan)
 
 
 
-                let randoslogan = Math.floor ( Math.random() * 4 )
-                 slogan.innerText = options[randoslogan].slogan
+                            let randoslogan = Math.floor ( Math.random() * 4 )
+                            slogan.innerText = options[randoslogan].slogan
+                            
 
-
-                    options.forEach(function(option) {
-                     let answerbutton = document.createElement("button")
-                        answerbutton.setAttribute("class", "btn btn-primary btn-lg")
-                        answerbutton.setAttribute("id", "answerbtn")
-                    answerbutton.innerText = option.name
-                    div.appendChild(answerbutton)
+                        options.forEach(function(option) {
+                            let answerbutton = document.createElement("button")
+                            answerbutton.setAttribute("value", option.slogan)
+                            answerbutton.setAttribute("class", "btn btn-primary btn-lg")
+                            
+                            answerbutton.setAttribute("id", "answerbtn")
+                            answerbutton.innerText = option.name
+                            div.appendChild(answerbutton)
+                        
+                        
+                        
+                        })
                     
-                    
-                    
+               function right() {
+                    sloganon = document.getElementById("sloganonboard")
+                    answerbtns = document.getElementsByClassName("btn btn-primary btn-lg")
+                    console.log(answerbtns)
+                    let answerarray = Array.from(answerbtns)
+                    answerarray.forEach(function(button) {
+                        button.addEventListener("click", (event) => {
+                        if (button.value === sloganon.innerText) {
+                            button.setAttribute("class", "btn btn-success btn-lg")
+                        } else {
+                            button.setAttribute("class", "btn btn-danger btn-lg")
+                        }
+                       
+                    }) 
                     })
-            
-                
+                        
+                    
+                    
+                }
+                right(options);
             })
     
     

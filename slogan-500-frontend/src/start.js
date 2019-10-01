@@ -1,11 +1,6 @@
 let companiesTest;
 let companiesURL = "http://localhost:3000/companies"
 let roundcomp = "http://localhost:3000/companies/show"
-//selecting buttons and slogan area
-
-
-
-
 
 let login = document.getElementById("login-input")
 let div = document.getElementById("left-container")

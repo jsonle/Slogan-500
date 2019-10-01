@@ -8,7 +8,6 @@ let startbtn = document.getElementById("play-button")
 // startbtn is the game start button
 document.addEventListener("DOMContentLoaded", (event) => {
 
-submit();
 startup();
 
 

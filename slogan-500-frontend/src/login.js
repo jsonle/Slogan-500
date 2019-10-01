@@ -2,7 +2,7 @@ const loginInput = document.getElementById("login-input");
 const loginButton = document.getElementById("login-button");
 const loginForm = document.getElementById("login-form");
 const navBar = document.getElementById("navbarColor03");
-const startButton = document.getElementById("play-buttom");
+const startButton = document.getElementById("play-button");
 
 function sessionFetch() {
     let formData = {

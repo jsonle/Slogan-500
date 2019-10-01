@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :companies
+  resources :companies 
+  #  get '/companies/random', to: 'companies#round'
   resources :scores
   resources :users
   resources :sessions, only: [:index, :create]

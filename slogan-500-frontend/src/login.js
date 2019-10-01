@@ -19,10 +19,10 @@ function sessionFetch() {
 
     fetch('http://localhost:3000/sessions', objConfig)
     .then(response => response.json())
-    .then(json => {
-        console.log(json);
-        // console.log("Successfully logged in");
-        // createLoggedInElements();
+    .then(sessionObj => {
+        console.log(sessionObj);
+        createLoggedInElements(sessionObj.username);
+
     })
 }
 

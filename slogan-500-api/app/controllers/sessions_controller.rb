@@ -12,7 +12,9 @@ class SessionsController < ApplicationController
     end
 
     def destroy
+        user = User.find_by(username: params[:username])
         session.delete(:user_id)
+        render json: user
     end
 
 end

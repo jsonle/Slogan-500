@@ -1,7 +1,8 @@
 const loginInput = document.getElementById("login-input");
 const loginButton = document.getElementById("login-button");
 const loginForm = document.getElementById("login-form");
-const navBar = document.getElementById("navbarColor03")
+const navBar = document.getElementById("navbarColor03");
+const startButton = document.getElementById("play-buttom");
 
 function sessionFetch() {
     let formData = {
@@ -55,5 +56,6 @@ function createLogOutButton() {
 loginButton.addEventListener("click", event => {
     event.preventDefault();
     sessionFetch();
+    startButton.disabled = false
 })
 

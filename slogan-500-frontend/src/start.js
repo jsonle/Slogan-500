@@ -1,7 +1,7 @@
 let companiesTest;
 let companiesURL = "http://localhost:3000/companies"
 let roundcomp = "http://localhost:3000/companies/show"
-let login = document.getElementById("login")
+let login = document.getElementById("login-input")
 let div = document.getElementById("left-container")
 // login is grabbing the submit button for login
 let startbtn = document.getElementById("play-button")
@@ -16,13 +16,6 @@ startup();
 })
 
 
-function submit() {
-    login.addEventListener("submit", (event) => {
-         event.preventDefault(); 
-        startbtn.disabled = false
-        
-    })
-} //clicking on login should enable the play button to be clicked
 
 function startup() {
     let numberofco = 4

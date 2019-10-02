@@ -125,6 +125,7 @@ function right(options) {
     function setup(options) {
         
         let sloganhead = document.createElement("h1")
+        sloganhead.id = "slogan-header"
         let slogan = document.createElement("h3")
         slogan.setAttribute("id", "sloganonboard")
         sloganhead.innerText = "Slogan:"

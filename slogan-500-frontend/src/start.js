@@ -10,7 +10,7 @@ let div = document.getElementById("left-container")
 let startbtn = document.getElementById("play-button")
 // startbtn is the game start button
 document.addEventListener("DOMContentLoaded", (event) => {
-    console.log(div)
+    
 
     startup();
 

@@ -68,6 +68,7 @@ function createLoggedInElements(user) {
 
     let aUser = document.createElement("a");
     aUser.setAttribute("class", "nav-link");
+    aUser.setAttribute("id", "userName")
     aUser.innerText = `${user['username']}`
     newItem.appendChild(aUser);
 

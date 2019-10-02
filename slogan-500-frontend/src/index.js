@@ -2,16 +2,10 @@ const playButton = document.getElementById("play-button");
 const gameTimer = document.getElementById("timer");
 const leftContainer = document.getElementById("left-container");
 const allScoresURL = 'http://localhost:3000/scores'
+let startTimer;
 
 function startGameTimer() {
-    let timeLeft = gameTimer.innerText
-    let startTimer = setInterval(decrementTimer, 1000);
-    
-    if (parseInt(timeLeft) === 0) {
-
-        clearInterval(startTimer);
-        gameOver();
-    }
+    startTimer = setInterval(decrementTimer, 1000);
 }
 
 function decrementTimer() {
@@ -75,6 +69,7 @@ function gameOver() {
 function createSaveButtonEvent(button, currentScore) {
     button.addEventListener("click", event => {
         event.preventDefault();
+        clearInterval(startTimer);
         saveScore(currentScore);
         button.setAttribute("disabled", "true");
     })

@@ -5,6 +5,7 @@ const navBar = document.getElementById("navbar-list");
 const navBarDiv = document.getElementById("navbarColor03");
 const startButton = document.getElementById("play-button");
 const form = loginForm;
+let userID;
 
 // Login
 function sessionFetch() {
@@ -24,7 +25,9 @@ function sessionFetch() {
     fetch('http://localhost:3000/sessions', objConfig)
     .then(response => response.json())
     .then(sessionObj => {
-        
+        console.log(sessionObj);
+        userID = sessionObj.id;
+        console.log(userID);
         createLoggedInElements(sessionObj);
 
     })
@@ -106,4 +109,3 @@ loginButton.addEventListener("click", event => {
     sessionFetch();
     startButton.disabled = false
 })
-

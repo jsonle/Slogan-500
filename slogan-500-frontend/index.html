@@ -20,8 +20,8 @@
       
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav mr-auto" id="navbar-list">
-            <li class="nav-item">
-              <a id="leaderboards" class="nav-link" href="#">Leaderboards</a>
+            <li class="nav-item" id="leaderboards">
+              <a class="nav-link" href="#">Leaderboard</a>
             </li>
           </ul>
           <form id="login-form" class="form-inline my-2 my-lg-0">
@@ -37,9 +37,15 @@
                 </div>
                 <button id="play-button" class="ui button teal" disabled ><i class="icon play"></i>PLAY</button>
             </div>
-            <div class="col-sm-4">
-                <div class="right-container" style="max-width: 40rem;">
-                <p>little</p>
+            <div id="div-center-container" class="col-sm-1">
+                <div id="game-timer-div">
+                    <h3>Timer:
+                        <span id="timer">30</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div id="right-div-container" class="right-container" style="max-width: 40rem;">
                 </div>
             </div>
         </div>
@@ -51,4 +57,5 @@
 <script src="./src/index.js"></script>
 <script src="./src/start.js"></script>
 <script src="./src/login.js"></script>
+<script src="./src/leaderboard.js"></script>
 </html>

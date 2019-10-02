@@ -26,7 +26,7 @@ function displayLeaderBoard(scores) {
 
     for (const score of scores) {
         const leaderboardItem = document.createElement("p");
-        leaderboardItem.innerText = `${score.user.username}: ${score.total_points}`
+        leaderboardItem.innerText = `${score.user.username}: ${score.total_points} points`
         leaderBoardDiv.appendChild(leaderboardItem);
     }
     rightContainer.appendChild(leaderBoardDiv);

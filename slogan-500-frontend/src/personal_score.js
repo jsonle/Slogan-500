@@ -14,7 +14,7 @@ PersonalScoresButton.addEventListener("click", (event) => {
     fetchscoreinfo();
     
 })
-function divclear(){
+function personclear(){
     while (personal.hasChildNodes()) {
         personal.removeChild(personal.firstChild)
     }
@@ -27,7 +27,7 @@ function fetchscoreinfo() {
         return response.json()
     })
     .then(function(score){
-        divclear();
+        personclear();
         let heading = document.createElement("h1")               
         personal.append(heading)    
         heading.innerText = "PERSONAL HIGH SCORES"

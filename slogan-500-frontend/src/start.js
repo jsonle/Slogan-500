@@ -25,13 +25,13 @@ function Wrong(){
     alert("WRONG")
 }
 function divclear(){
-    while (div.firstChild) {
+    while (div.hasChildNodes()) {
         div.removeChild(div.firstChild)
     }
 }
 function buffer(){
-   let clear = setTimeout(divclear, 700)
-   let newstuff = setTimeout(fetchSlogan,850)
+    // setTimeout(divclear, 700)
+    setTimeout(fetchSlogan,850)
 
 
 }
@@ -43,6 +43,7 @@ function buffer(){
         
        
 function fetchSlogan() {
+   
         fetch(roundcomp)
         .then(function(response){
             return response.json()
@@ -52,7 +53,7 @@ function fetchSlogan() {
             let score = document.getElementById("score").innerText = points 
             
 
-            
+            divclear();
             setup(options);
 
                         
@@ -94,14 +95,13 @@ function right(options) {
     
     answerarray.forEach(function(button) {
         button.addEventListener("click", (event) => {
-            console.log(button.value)
-            console.log(event.target.id)
+            
             
             
             if (button.value == sloganquotes) {
                 points ++
                 button.setAttribute("class", "btn btn-success btn-lg")
-                console.log(`blahhhh ${points}`)
+               
                 questionnum + 1 
                 buffer();
                 

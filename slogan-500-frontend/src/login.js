@@ -24,7 +24,7 @@ function sessionFetch() {
     fetch('http://localhost:3000/sessions', objConfig)
     .then(response => response.json())
     .then(sessionObj => {
-        console.log(sessionObj);
+        
         createLoggedInElements(sessionObj);
 
     })
@@ -65,6 +65,7 @@ function createLoggedInElements(user) {
 
     let aUser = document.createElement("a");
     aUser.setAttribute("class", "nav-link");
+    aUser.setAttribute("id", "userName")
     aUser.innerText = `${user['username']}`
     newItem.appendChild(aUser);
 

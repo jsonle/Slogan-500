@@ -6,4 +6,8 @@ class UsersController < ApplicationController
         users = User.all 
         render json: users, include: [:scores]
     end 
+    def show 
+     user = User.find(params[:id])
+     render json: user, include: [:scores]
+    end
 end

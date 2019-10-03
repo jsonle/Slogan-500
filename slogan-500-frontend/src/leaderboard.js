@@ -1,10 +1,10 @@
 const rightContainer = document.getElementById("right-div-container");
 const leaderboardButton = document.getElementById("leaderboards");
-const scoresURL = 'http://localhost:3000/scores/leaders'
+const leaderboardURL = 'http://localhost:3000/leaderboard'
 
 function fetchLeaderBoard() {
     
-    fetch(scoresURL)
+    fetch(leaderboardURL)
     .then(response => response.json())
     .then(scoreObjects => {
         console.log(scoreObjects);

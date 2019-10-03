@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :companies 
   #  get '/companies/random', to: 'companies#round'
   resources :scores
+  get '/leaderboard', to: 'scores#leaderboard', as: 'leaderboard'
   resources :users
   resources :sessions, only: [:index, :create]
   delete '/sessions', to: 'sessions#destroy'

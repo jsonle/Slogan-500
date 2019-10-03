@@ -90,6 +90,10 @@ function createLogOutButton(user) {
 
 function addLogoutEvent(button, user) {
     button.addEventListener("click", event => {
+        while (rightContainer.hasChildNodes()) {
+            rightContainer.removeChild(rightContainer.firstChild);
+        }
+
         logoutFetch(user);
     })
 }

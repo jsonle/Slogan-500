@@ -20,15 +20,18 @@ function displayLeaderBoard(scores) {
     const leaderBoardDiv = document.createElement("div");
     leaderBoardDiv.id = "leaderboard-scores";
 
+    const leaderBoardList = document.createElement("ol");
+
     const leaderBoardTitle = document.createElement("h3");
     leaderBoardTitle.innerText = "Leaderboard";
     leaderBoardDiv.appendChild(leaderBoardTitle);
 
     for (const score of scores) {
-        const leaderboardItem = document.createElement("p");
+        const leaderboardItem = document.createElement("li");
         leaderboardItem.innerText = `${score.user.username}: ${score.total_points} points`
-        leaderBoardDiv.appendChild(leaderboardItem);
+        leaderBoardList.appendChild(leaderboardItem);
     }
+    leaderBoardDiv.appendChild(leaderBoardList);
     rightContainer.appendChild(leaderBoardDiv);
 }
 

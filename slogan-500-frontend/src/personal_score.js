@@ -31,14 +31,14 @@ function fetchscoreinfo() {
         heading.innerText = "Personal High Scores"
         let usernameinfo = document.getElementById("userName")
         let usernamenav = usernameinfo.innerText 
-        let ul = document.createElement("ul")
+        let ul = document.createElement("ol")
         personal.appendChild(ul)
                 
         scores.forEach(function(score) {
             
             if (score.user.username === usernamenav) {
              let li = document.createElement("li") 
-             li.innerText = score.total_points 
+             li.innerText = `${score.total_points} points` 
              li.setAttribute("score-id", `${score.id}`)
 
              const deleteButton = document.createElement("button");

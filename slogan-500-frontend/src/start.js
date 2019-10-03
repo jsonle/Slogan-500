@@ -96,11 +96,12 @@ function right(options) {
     
     answerarray.forEach(function(button) {
         button.addEventListener("click", (event) => {
-            
+       
             
             
             if (button.value == sloganquotes) {
                 points ++
+                
                 button.setAttribute("class", "btn btn-success btn-lg")
                
             
@@ -108,6 +109,7 @@ function right(options) {
                 
             } else {
                 button.setAttribute("class", "btn btn-danger btn-lg")
+                
                 
                 buffer();
             }

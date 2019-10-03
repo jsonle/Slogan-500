@@ -62,17 +62,17 @@ function logoutFetch(user) {
 function createLoggedInElements(user) {
     loginForm.remove();
 
-    let newItem = document.createElement("li");
-    newItem.setAttribute("class", "nav-item");
-    newItem.id = "session-username";
+    let newUserItem = document.createElement("li");
+    newUserItem.setAttribute("class", "nav-item");
+    newUserItem.id = "session-username";
 
     let aUser = document.createElement("a");
     aUser.setAttribute("class", "nav-link");
     aUser.setAttribute("id", "userName")
-    aUser.innerText = `${user['username']}`
-    newItem.appendChild(aUser);
+    aUser.innerText = `Welcome, ${user['username']}`
+    newUserItem.appendChild(aUser);
 
-    navBar.appendChild(newItem);
+    navBar.appendChild(newUserItem);
     createLogOutButton(user);
 }
 
@@ -81,6 +81,7 @@ function createLogOutButton(user) {
     logOutButton.id = "logout";
     logOutButton.innerText = "Logout";
     logOutButton.setAttribute("class", "navbar-right");
+    logOutButton.classList.add("btn-sm");
     addLogoutEvent(logOutButton, user)
 
     navBar.appendChild(logOutButton);

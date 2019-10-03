@@ -38,11 +38,12 @@ function fetchscoreinfo() {
             
             if (score.user.username === usernamenav) {
              let li = document.createElement("li") 
-             li.innerText = `${score.total_points} points` 
+             li.innerHTML = `${score.total_points} points &nbsp &nbsp &nbsp &nbsp &nbsp` 
              li.setAttribute("score-id", `${score.id}`)
 
              const deleteButton = document.createElement("button");
              deleteButton.innerText = "Remove Score";
+             deleteButton.setAttribute("class", "btn-sm")
              createDeleteEvent(deleteButton, score);
              li.appendChild(deleteButton);
 

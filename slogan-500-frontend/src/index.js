@@ -83,8 +83,10 @@ function gameOver() {
     leftContainer.appendChild(saveScoreButton);
     let image = document.createElement("img")
     image.setAttribute("src", "https://stayhipp.com/wp-content/uploads/2019/09/SpongeBon.jpg")
-    image.setAttribute("height", 400)
-    image.setAttribute("width", 450)
+    image.setAttribute("height", 225)
+    image.setAttribute("width", 350)
+    image.setAttribute("float", "right")
+    image.id = "image"
     leftContainer.appendChild(image)
 }
 

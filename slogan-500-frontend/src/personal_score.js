@@ -28,9 +28,9 @@ function fetchscoreinfo() {
     })
     .then(function(score){
         personclear();
-        let heading = document.createElement("h1")               
+        let heading = document.createElement("h2")               
         personal.append(heading)    
-        heading.innerText = "PERSONAL HIGH SCORES"
+        heading.innerText = "Personal High Scores"
         let usernameinfo = document.getElementById("userName")
         let usernamenav = usernameinfo.innerText 
         let ul = document.createElement("ul")

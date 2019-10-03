@@ -3,7 +3,6 @@ const timer = document.getElementById("timer")
 let points = 0
 let companiesURL = "http://localhost:3000/companies"
 let roundcomp = "http://localhost:3000/companies/show"
-let questionnum = 1 
 let login = document.getElementById("login-input")
 let div = document.getElementById("left-container")
 // login is grabbing the submit button for login
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
 
     startup();
-    move();
 
 
 
@@ -103,12 +101,10 @@ function right(options) {
                 points ++
                 button.setAttribute("class", "btn btn-success btn-lg")
                
-                questionnum + 1 
                 buffer();
                 
             } else {
                 button.setAttribute("class", "btn btn-danger btn-lg")
-                questionnum + 1 
                 buffer();
             }
            

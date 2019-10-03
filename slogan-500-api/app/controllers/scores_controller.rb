@@ -1,6 +1,6 @@
 class ScoresController < ApplicationController
     def index 
-        scores = Score.all
+        scores = Score.all.sort_by {|score| score.total_points}.reverse
         render json: scores, include: [:user]
     end
     

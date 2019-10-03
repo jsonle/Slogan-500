@@ -4,9 +4,10 @@ const leftContainer = document.getElementById("left-container");
 const allScoresURL = 'http://localhost:3000/scores'
 let startTimer;
 let scoreTracker = document.getElementById("score");
+let time = 30000
 
 function startGameTimer() {
-    startTimer = setInterval(decrementTimer, 1000);
+    startTimer = setInterval(decrementTimer, 100);
 
 }
 
@@ -15,13 +16,17 @@ function stopGameTimer() {
 }
 
 function decrementTimer() {
-
+    
     let timeLeft = gameTimer.innerText;
     let clock = document.getElementById("bar")
-    if (parseInt(timeLeft) > 0) {
+        time -=100
+        let remain = time / 30000 * 100 
+        clock.style.width = remain + "%"
+    if (time % 1000 == 0) {
+              
         timeLeft --;
         let clockdown = parseInt(timeLeft) / 30 * 100 
-        clock.style.width = clockdown + "%"
+        
         
         gameTimer.innerText = `${timeLeft}`;
     } else if (parseInt(timeLeft) === 0) {

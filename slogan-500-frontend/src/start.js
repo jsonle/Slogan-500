@@ -9,6 +9,7 @@ let div = document.getElementById("left-container")
 let startbtn = document.getElementById("play-button")
 let progress = document.getElementById("full")
 // startbtn is the game start button
+
 document.addEventListener("DOMContentLoaded", (event) => {
     
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 })
+
 function correct() {
     alert("You were right!")
 }
@@ -101,10 +103,12 @@ function right(options) {
                 points ++
                 button.setAttribute("class", "btn btn-success btn-lg")
                
+            
                 buffer();
                 
             } else {
                 button.setAttribute("class", "btn btn-danger btn-lg")
+                
                 buffer();
             }
            

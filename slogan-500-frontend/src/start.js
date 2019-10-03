@@ -8,12 +8,13 @@ let login = document.getElementById("login-input")
 let div = document.getElementById("left-container")
 // login is grabbing the submit button for login
 let startbtn = document.getElementById("play-button")
+let progress = document.getElementById("full")
 // startbtn is the game start button
 document.addEventListener("DOMContentLoaded", (event) => {
     
 
     startup();
-
+    move();
 
 
 
@@ -158,7 +159,7 @@ function right(options) {
     
 
 
-
+    
 
 
 

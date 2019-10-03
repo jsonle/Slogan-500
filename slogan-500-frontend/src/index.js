@@ -6,12 +6,18 @@ let startTimer;
 
 function startGameTimer() {
     startTimer = setInterval(decrementTimer, 1000);
+
 }
 
 function decrementTimer() {
+
     let timeLeft = gameTimer.innerText;
+    let clock = document.getElementById("bar")
     if (parseInt(timeLeft) > 0) {
         timeLeft --;
+        let clockdown = parseInt(timeLeft) / 30 * 100 
+        clock.style.width = clockdown + "%"
+        
         gameTimer.innerText = `${timeLeft}`;
     } else if (parseInt(timeLeft) === 0) {
         gameTimer.innerText = 0;

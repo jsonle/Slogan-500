@@ -3,10 +3,16 @@ const gameTimer = document.getElementById("timer");
 const leftContainer = document.getElementById("left-container");
 const allScoresURL = 'http://localhost:3000/scores'
 let startTimer;
+let scoreTracker = document.getElementById("score");
 let time = 30000
+
 function startGameTimer() {
     startTimer = setInterval(decrementTimer, 100);
 
+}
+
+function stopGameTimer() {
+    clearInterval(startTimer);
 }
 
 function decrementTimer() {
@@ -24,7 +30,8 @@ function decrementTimer() {
         
         gameTimer.innerText = `${timeLeft}`;
     } else if (parseInt(timeLeft) === 0) {
-        gameTimer.innerText = 0;
+        // gameTimer.innerText = 0;
+        stopGameTimer();
         gameOver();
     }
 }
@@ -59,7 +66,7 @@ function gameOver() {
         leftContainer.removeChild(leftContainer.firstChild);
     }
 
-    let currentScore = document.getElementById("score").innerText;
+    currentScore = document.getElementById("score").innerText;
 
     const gameOverHeader = document.createElement("h2");
     gameOverHeader.id = "game-over-head";
@@ -79,7 +86,6 @@ function gameOver() {
 function createSaveButtonEvent(button, currentScore) {
     button.addEventListener("click", event => {
         event.preventDefault();
-        clearInterval(startTimer);
         saveScore(currentScore);
         button.setAttribute("disabled", "true");
     })
@@ -89,10 +95,13 @@ playButton.addEventListener("click", event => {
     event.preventDefault();
     console.log(userID);
 
+
     if (parseInt(gameTimer.innerText) !== 30) {
         gameTimer.innerText = "30";
-    } else {
-        startGameTimer();
-    }
+        points = 0;
+    } 
+    
+    startGameTimer();
+
 
 })

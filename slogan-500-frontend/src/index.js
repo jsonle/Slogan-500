@@ -7,7 +7,7 @@ let scoreTracker = document.getElementById("score");
 let time = 30000
 
 function startGameTimer() {
-    startTimer = setInterval(decrementTimer, 100);
+    startTimer = setInterval(decrementTimer, 10);
 
 }
 
@@ -19,7 +19,7 @@ function decrementTimer() {
     
     let timeLeft = gameTimer.innerText;
     let clock = document.getElementById("bar")
-        time -=100
+        time -=10
         let remain = time / 30000 * 100 
         clock.style.width = remain + "%"
     if (time % 1000 == 0) {

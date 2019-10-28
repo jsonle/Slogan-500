@@ -22,7 +22,7 @@ function sessionFetch() {
         body: JSON.stringify(formData)
     }
 
-    fetch('https://thawing-wave-86373.herokuapp.com/sessions', objConfig)
+    fetch('https://warm-brook-72462.herokuapp.com/sessions', objConfig)
     .then(response => response.json())
     .then(sessionObj => {
         console.log(sessionObj);
@@ -49,7 +49,7 @@ function logoutFetch(user) {
         body: JSON.stringify(data)
     }
 
-    fetch('https://thawing-wave-86373.herokuapp.com/sessions', configObj)
+    fetch('https://warm-brook-72462.herokuapp.com/sessions', configObj)
     .then(response => response.json())
     .then(userObj => {
         console.log(userObj);

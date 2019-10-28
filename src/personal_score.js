@@ -1,6 +1,6 @@
 
 const PersonalScoresButton = document.getElementById("Personal-Scores");
-let ScoresURL = "https://thawing-wave-86373.herokuapp.com/scores"
+let ScoresURL = "https://warm-brook-72462.herokuapp.com/scores"
 let personal = document.getElementById("right-div-container")
 let ul = document.createElement("ul")
  personal.appendChild(ul)           

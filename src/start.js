@@ -1,8 +1,8 @@
 let isAnswered = false;
 const timer = document.getElementById("timer")
 let points = 0
-let companiesURL = "http://localhost:3000/companies"
-let roundcomp = "http://localhost:3000/companies/show"
+let companiesURL = "https://thawing-wave-86373.herokuapp.com/companies"
+let roundcomp = "https://thawing-wave-86373.herokuapp.com/companies/show"
 let login = document.getElementById("login-input")
 let div = document.getElementById("left-container")
 // login is grabbing the submit button for login

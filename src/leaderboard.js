@@ -1,6 +1,6 @@
 const rightContainer = document.getElementById("right-div-container");
 const leaderboardButton = document.getElementById("leaderboards");
-const leaderboardURL = 'http://localhost:3000/leaderboard'
+const leaderboardURL = 'https://thawing-wave-86373.herokuapp.com/leaderboard'
 
 function fetchLeaderBoard() {
     
